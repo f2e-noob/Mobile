@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/model.css" />
+<link rel="stylesheet" type="text/css" href="css/cpyd.css" />
+ 
+<title>产品预订</title>
+</head>
+<body>
+<div id="page" class="page borderbox ">
+	<div class="container mendian_detail_container">
+    	<div class="yuding_top_nav">
+        	<a href="javascript:;" class="yuding_top_nav_left"><img src="images/sanjiao_left_white.png" /></a>
+        	<a href="javascript:;" class="yuding_top_nav_right"><img src="images/people.png" class="people" /><img src="images/garden_red.png" class="garden_red" /></a>
+            <div class="borderbox">中关村店</div>
+        </div>
+        <div class="mendian_detail_banner_con">
+                
+                <div class="mendian_detail_banner" id='slider'>
+                    <ul>
+                        <li style="display:none;"><img src="images/mendian_detail_banner.png" /></li>
+                        <li style="display:block;"><img src="images/mendian_detail_banner.png" /></li>
+                        <li style="display:none;"><img src="images/mendian_detail_banner.png" /></li>
+                    </ul>
+                </div>
+                <div class="mendian_detail_banner_shadow_con">
+                    <div class="mendian_detail_banner_shadow"></div>
+                    <p class="borderbox">中关村店<span>4.8分</span></p>
+                </div>
+            </div>  
+        <div class="mendian_detail_content">
+              <ul class="mendian_detail_address">
+            	<li><a href="javascript:;"><img src="images/cpyd_icon5.png" class="mendian_detail_address_icon" /><img src="images/sanjiao_right_gray.png" class="mendian_detail_address_jiantou_top" /><p class=" ">北京市海淀区中关村南大街48号九龙商务中心B座225</p></a></li>
+                <li><a href="javascript:;"><img src="images/cpyd_icon6.png" class="mendian_detail_address_icon" /><img src="images/sanjiao_right_gray.png" class="mendian_detail_address_jiantou_top" /><p class="borderbox">拨打电话 010-0101010</p></a></li>
+                <li><a href="javascript::"><img src="images/cpyd_icon4.png" class="mendian_detail_address_icon" /><p class="borderbox"><div class="startDateCon"><input type="date" /></div><span class="f_l"> 入住，</span><div class="endDateCon"><input type="date"/> </div><span class="f_l">离开（<span>1晚</span>）</span></p></a></li>
+            </ul>
+            <ul class="mendian_detail_nav">
+            	<li ><a href="javascript:;" class="borderbox active"><img src="images/cpyd_icon7.png" />房间预订</a></li>
+                <li><a href="javascript:;" class="borderbox"><img src="images/cpyd_icon3.png" />酒店介绍</a></li>
+                <li ><a href="javascript:;" class="borderbox"><img src="images/cpyd_icon2.png" />精彩点评</a></li>
+                <li><a href="javascript:;" class="borderbox"><img src="images/cpyd_icon1.png" />经典相册</a></li>
+            </ul>
+            <ul class="mendian_detail_list">
+            	<li>
+                <a href="javascript:;" class="mendian_detail_list_a borderbox">
+                	<img src="images/mendian_detail_banner.png" class="mendian_detail_lsit_img" />
+                    <p class="mendian_detail_list_title">经典大床房会员99折</p>
+                    <p class="mendian_detail_list_desc">大床。无早。免费宽带。免费取消</p>
+                    <p class="mendian_detail_list_parse"><span class="parse">$123</span><del>$123</del></p>
+                    <img src="images/room_red.png" class="mendian_detail_lsit_cu" />
+                </a>
+                    <a href="javascrpt:;" class="mendian_detail_list_yuding_true">在线预订</a>
+                </li>
+                <li>
+                <a href="javascript:;" class="mendian_detail_list_a borderbox">
+                	<img src="images/mendian_detail_banner.png" class="mendian_detail_lsit_img" />
+                    <p class="mendian_detail_list_title">经典大床房会员99折</p>
+                    <p class="mendian_detail_list_desc">大床。无早。免费宽带。免费取消</p>
+                    <p class="mendian_detail_list_parse"><span class="parse">$123</span><del>$123</del></p>
+                    <img src="images/room_red.png" class="mendian_detail_lsit_cu" />
+                    <a href="javascrpt:;" class="mendian_detail_list_yuding_false">无房</a>
+                </a>
+                </li>
+            </ul>
+            <div class="mendian_detail_text">
+            	<h3 class="mendian_detail_text_title">特别提示</h3>
+                <div class="mendian_detail_text_con">
+                	<p>该酒店入住时间为14：00，退房标准结算时间为次日中午12点，如提前入店或推迟入店均需要酌情收取一定费用。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--page-->
+<script src="js/jquery-2.0.3.min.js"></script>
+
+<script type="text/javascript">
+function setminheihgt(className,num){
+	//var page=$('#page');
+	var heightclass=$('.'+className);
+	var contentheight=heightclass.height();
+	var windowheight=$(document).height();
+
+	if(arguments.length==2){
+
+		windowheight=windowheight-num;
+	}
+	if(windowheight>=contentheight){
+		heightclass.height(windowheight);
+	}
+};
+window.onload=function(){
+setminheihgt('container')
+};
+window.onresize=function(){
+setminheihgt('container')
+};
+
+var address_list=$('.mendian_detail_address li');
+iconPosition(address_list,0);
+function iconPosition(obj,num){
+	for(var i=0;i<obj.length;i++){
+		var objI=obj.eq(i);
+		var objP=objI.find('a');
+		var objIcon=objI.find('img');
+		var objPHeight=objP.height()+num;
+		var objIconHeight=objIcon.height();
+		var margintop=parseInt((objPHeight-objIconHeight)/2);
+		objIcon.css('margin-top',margintop);
+	}
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="style/model.css" />
+<link rel="stylesheet" type="text/css" href="style/page.css" />
+
+<title>手机相册-首页</title>
+</head>
+<body>
+<div id="page" class="page borderbox">
+<div id="albumListCon" class="albumListCon">
+	<a href="javascript:;" class="album albumWaterFallList">
+    	<div class="albumPhoto"><img src="images/albumShowPhoto.jpg" /></div>
+        <p class="albumText borderbox">
+        	相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页
+        </p>
+    </a><!--album-->
+    <a  href="javascript:;" class="album albumWaterFallList">
+    	<div class="albumPhoto"><img src="images/相册列表副本.jpg" /></div>
+        <p class="albumText borderbox">
+        	相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页
+        </p>
+    </a><!--album-->
+    <a href="javascript:;" class="album albumWaterFallList">
+    	<div class="albumPhoto"><img src="images/相册详细页面.jpg" /></div>
+        <p class="albumText borderbox">
+        	相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页
+        </p>
+    </a><!--album-->
+    <a  href="javascript:;" class="album albumWaterFallList">
+    	<div class="albumPhoto"><img src="images/相册详细页面_点击图片后效果副本.jpg" /></div>
+        <p class="albumText borderbox">
+        	相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页
+        </p>
+    </a><!--album-->
+    <a  href="javascript:;" class="album albumWaterFallList">
+    	<div class="albumPhoto"><img src="images/相册样式2副本.jpg" /></div>
+        <p class="albumText borderbox">
+        	相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页
+        </p>
+    </a><!--album-->
+    <a  href="javascript:;" class="album albumWaterFallList">
+    	<div class="albumPhoto"><img src="images/相册样式_1.jpg" /></div>
+        <p class="albumText borderbox">
+        	相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页
+        </p>
+    </a><!--album-->
+</div><!--albumListCon-->
+    <a href="javascript:;" class="ajaxload borderbox">加载更多内容</a>
+</div><!--page-->
+
+<script src="javascript/jquery-2.0.3.min.js"></script>
+<script type="text/ecmascript">
+$(function(){
+	/*瀑布流*/
+
+function funwaterfallStream(){
+	var waterfallStream=$('#albumListCon');
+var li=waterfallStream.find('a');
+var liLength=li.length;
+var documentWidth=$(document).outerWidth();
+
+
+var margin=parseInt(documentWidth*0.04);
+var number=2;
+var width=li.eq(0).outerWidth()+margin;
+	var arrayHeight=[];
+	for(var i=0;i<liLength;i++){
+		liHeight=li.eq(i).outerHeight()
+		if(i<number){
+			arrayHeight[i]=liHeight;
+			li.eq(i).css('top',0);
+			li.eq(i).css('left',width*i);
+		}else{
+			minHeight=Math.min.apply(null,arrayHeight);
+			minKey=getarraykey(arrayHeight,minHeight);
+			arrayHeight[minKey]+=liHeight+margin;
+			li.eq(i).css('top',+minHeight+margin);
+			li.eq(i).css('left',width*minKey);
+		}
+	}
+	maxHeight=Math.max.apply(null,arrayHeight);
+	var waterfallStreamHeight=+margin+maxHeight;
+	waterfallStream.height(waterfallStreamHeight);
+};
+function getarraykey(s, v) {for(k in s) {if(s[k] == v) {return k;}}}
+window.onload=function(){funwaterfallStream();}
+window.onresize = function() {funwaterfallStream();};
+
+var ajaxload=$('.ajaxload');
+ajaxload.click(function(){
+	
+	var html=$('<a  href="javascript:;" class="album albumWaterFallList"><div class="albumPhoto"><img src="images/相册样式2副本.jpg" /></div><p class="albumText borderbox">相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页</p></a><!--album--><a  href="javascript:;" class="album albumWaterFallList"><div class="albumPhoto"><img src="images/相册样式_1.jpg" /></div><p class="albumText borderbox">相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页</p></a><!--album-->');
+	
+	$('#albumListCon').append(html)
+	funwaterfallStream();
+});
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/model.css" />
+<link rel="stylesheet" type="text/css" href="css/cpyd.css" />
+
+<title>产品预订</title>
+</head>
+<body>
+<div id="page" class="page borderbox ">
+	<div class="container ">
+    	<div class="yudingdan_banner">
+        	<img src="images/yudingdan_banner.png" class="yudingdan_banner_img" />
+        </div>
+        <div class="yuding_content">
+        	<div class="yuding_info yuding_room_info">
+            	<p class="yuding_room_title">北京中关村店</p>
+                <p>入住日期：2011-11-11</p>
+                <p>离店日期：2011-11-11</p>
+                <p>入驻房型：大床房</p>
+                <p class="fxtd"><span class="fxtd_span1">房型特点：</span><span class="fxtd_span2">大床，双早</span></p>
+                <a href="javascript:;" class="modify">修改订单</a>
+            </div>
+            <p class="yuding_title">预订信息</p>
+            <div class="yuding_info">
+            	<p>房间数量<span>1</span>间<a href="javascript:;" class="remove_room"></a><a href="javascript:;" class="add_room"></a></p>
+                <p>保留时间<span>18:00</span></p>
+            </div>
+            <p class="yuding_title">联系人信息</p>
+            <div class="yuding_info">
+            	<label ><span>入住人姓名</span><input type="text" class="borderbox" /></label>
+                <label ><span>手机号码</span><input type="text" class="borderbox" /></label>
+            </div>
+            <div class="total_price">
+            	<p>总计<span>$111</span></p>
+            </div>
+            <div class="yuding_button_con">
+            	<a href="javascript:" class="yuding_button borderbox">提交</a>
+            </div>
+        </div>
+    </div>
+</div><!--page-->
+<script src="js/jquery-2.0.3.min.js"></script>
+
+<script type="text/javascript">
+function setminheihgt(className,num){
+	//var page=$('#page');
+	var heightclass=$('.'+className);
+	var contentheight=heightclass.height();
+	var windowheight=$(document).height();
+
+	if(arguments.length==2){
+
+		windowheight=windowheight-num;
+	}
+	if(windowheight>=contentheight){
+		heightclass.height(windowheight);
+	}
+};
+window.onload=function(){
+setminheihgt('container')
+};
+window.onresize=function(){
+setminheihgt('container')
+};
+</script>
+</body>
+</html>

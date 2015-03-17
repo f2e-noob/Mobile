@@ -1,0 +1,64 @@
+
+html,body{ min-height:100%; height:100%;}
+/*整体*/
+.page{ background-color:#efefef; }
+
+
+/*相册*/
+.albumListCon{ min-width:320px; padding-bottom:4%;}
+.albumListCon img{ width:100%;}
+.album{ display:inline-block; background-color:#fff; border-radius:5px; margin-top:4%; position:relative; border:1px solid #bfbfbd;}
+.albumIndex{ width:92%; margin-left:4%; border:0px; }
+.albumIndex .albumPhoto{border:1px solid #bfbfbd; border-radius:5px 5px 0px 0px;}
+.albumIndex .albumText{border:1px solid #bfbfbd; border-radius:0px 0px 5px 5px; position:relative; padding:10px 1% 15px 1%;}
+.albumIndex:after{ content:""; float:left; width:100%; height:5px; position:absolute; left:0px; bottom:3px; border-radius:0px 0px 5px 5px; border-bottom:1px solid #bfbfbd;}
+.albumIndex:before{ content:""; float:left; width:100%; height:5px; position:absolute; left:0px; bottom:6px; border-radius:0px 0px 5px 5px; border-bottom:1px solid #bfbfbd;}
+.albumList { padding:1%; overflow:hidden;}
+.albumPhoto{   padding:1%; overflow:hidden;}
+.albumPhoto img{float:left; width:100%;}
+.albumText{ line-height:23px; padding:10px 0px 0px 0px ; color:#323232; font-size:14px;  margin-top:-1px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.albumWaterFallList .albumText{ padding:5px ;}
+
+.albumIndexCon{ padding-bottom:4%;}
+
+.ajaxload{ display:inline-block; width:92%; margin:0% 4% 4% 4%; padding:20px; text-align:center; color:#4c4c4c; font-size:14px; font-weight:bold; border:1px solid #bfbfbd; border-radius:5px; background-color:#fcfcfc;
+background-image: -moz-linear-gradient(top,#ffffff,#efefef);
+background-image: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#efefef));
+background-image: -webkit-linear-gradient(top,#ffffff,#efefef);
+background-image: -o-linear-gradient(top,#ffffff,#efefef);
+background-image: linear-gradient(to bottom,#ffffff,#efefef);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#efefef',GradientType=0);		
+
+}
+
+
+/*相册瀑布流列表*/ 
+.albumWaterFallList{width:44%;margin-left:4%; position:absolute;}
+/*相册列表*/
+.albumList{ width:41%;margin-left:4%;}
+
+
+.pagePhoto{ background-color:#000; }
+.returnAlbum{visibility:hidden; display:inline-block; width:28px; margin-left:20px;  color:#fff; font-size:43px;font-family:Arial, Helvetica, sans-serif; overflow:hidden; }
+.photo_list{ padding:5px;}
+.photo_img{}
+.photo_temp{}
+.photo_desc{ visibility:hidden; color:#fff; font-size:14px; overflow:hidden; padding:9px; position:relative;}
+.photo_text{ width:100%; overflow: hidden;white-space: nowrap;text-overflow: ellipsis; float:left; padding-right:100px;}
+.photo_index{ width:100px;  display:inline-block; float:right; text-align:right; position:absolute; right:0px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

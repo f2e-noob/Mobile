@@ -1,0 +1,127 @@
+/*----------  Global  ----------*/
+html,body{font-family:Verdana, Geneva, sans-serif; font-size:12px;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,select,p,blockquote,th,td{margin:0; padding:0;}
+table{border-collapse:collapse;}
+fieldset,img{border:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%; font-weight:normal;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {padding:0; margin:0; list-style:none;} 
+h1,h2,h3,h4,h5,h6 {font-weight:normal; font-size:100%;} 
+a{outline:none;cursor:pointer;color:#fff;}
+a:link,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+a,img{border:none; width:100%;}
+a.noline:hover{text-decoration:none;}
+a.underline{text-decoration:underline;}
+input,textarea{outline:none;}
+button,input,textarea,select,optgroup,option,file{font-family:inherit; font-size:inherit; font-style:inherit; font-weight:inherit; outline:none;}
+body {}
+/* remove button border */
+::-moz-focus-inner{border-color:transparent !important;}
+/* selection */
+::-moz-selection {color:#fff; background:#79ac21; text-shadow: none;}
+::selection {color:#fff; background:#79ac21; text-shadow: none;}
+/* input */
+#searchform ::-webkit-input-placeholder {color:#ddbcac;}
+#searchform input:-moz-placeholder {color:#ddbcac;}
+#commentform ::-webkit-input-placeholder {color:#b8b79f;}
+#commentform input:-moz-placeholder {color:#b8b79f;}
+/* position */
+.mauto {margin-left:auto; margin-right:auto;}
+.ption_r {position:relative;}
+.ption_a {position:absolute;}
+.ption_f {position:fixed;}
+/* font */
+.f_w{font-weight:bold;}
+.f_n{font-weight:normal;}
+.fs10{font-size:10px;}
+.fs12{font-size:12px;}
+.fs14{font-size:14px;}
+.fs16{font-size:16px;}
+.fs18{font-size:18px;}
+.fs20{font-size:20px;}
+.fs24{font-size:22px; font-family: "Microsoft Yahei",Verdana; letter-spacing:1px;}
+.fs30{font-size:30px;}
+/*shadow*/
+.t_shadow_3 {text-shadow: 1px 1px rgba(255,255,255,0.3);}
+.t_shadow {text-shadow: 1px 1px rgba(255,255,255,0.65);}
+/*width*/
+
+/* margin */
+.ma{margin-left:auto; margin-right:auto;}
+.mt3{margin-top:3px;}
+.mt5{margin-top:5px;}
+.mt10{margin-top:10px;}
+.mt20{margin-top:20px;}
+.mt30{margin-top:30px;}
+.mt40{margin-top:40px;}
+.mr5{margin-right:5px;}
+.mr10{margin-right:10px;}
+.mr20{margin-right:20px;}
+.mr30{margin-right:30px;}
+.mr40{margin-right:40px;}
+.ml5{margin-left:5px;}
+.ml10{margin-left:10px;}
+.ml20{margin-left:20px;}
+.ml30{margin-left:30px;}
+.ml40{margin-left:40px;}
+.mb5{margin-bottom:5px;}
+.mb10{margin-bottom:10px;}
+.mb20{margin-bottom:20px;}
+.mb30{margin-bottom:30px;}
+.mb40{margin-bottom:40px;}
+/* padding */
+.p10{padding:10px;}
+.pl10{padding-left:10px;}
+.pl25{padding-left:25px;}
+.pr20{padding-right:20px;}
+.pb10{padding-bottom:10px;}
+.pt10{padding-top:10px;}
+.pt20{padding-top:20px;}
+/* float */
+.f_r{float:right !important;}
+.f_l{float:left !important;}
+/* clear */
+.clear{clear:both; _height:1px; overflow:hidden; *display:inline;}
+/* text-align */
+.text_c{text-align:center;}
+/* single base */
+.alignleft {clear: both; display: block; float:left; margin:0 20px 20px 0;}
+.aligncenter {clear: both; display: block; margin-left: auto; margin-right: auto;}
+.alignright {clear: both; display: block; float:right; margin:0 0 20px 20px;}
+html{font-size:62.5%;}
+.empty_img{ display:inline-block; width:0px; height:100%; vertical-align:middle;}
+.shadow_bg{ width:100%; height:100%; position:absolute; z-index:-1; background-color:#000; opacity:0.5;}
+
+
+.hidden{ visibility:hidden;}
+/*顶部*/
+
+
+
+.clearBoth{ clear:both;}
+
+
+
+
+.clearfix:after { 
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {display: inline-block;}
+ 
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;} 
+.clearfix {display: block;} 
+/* End hide from IE-mac */
+
+
+#page{min-width:320px;}
+.borderbox{
+box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box; /* Safari */
+}
+.hb100{ height:100%;}

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/model.css" />
+<link rel="stylesheet" type="text/css" href="css/cpyd.css" />
+
+<title>产品预订</title>
+</head>
+<body>
+<div id="page" class="page borderbox ">
+	<div class="container mendian_detail_container">
+    	<div class="yuding_top_nav">
+        	<a href="javascript:;" class="yuding_top_nav_left"><img src="images/sanjiao_left_white.png" /></a>
+        	<a href="javascript:;" class="yuding_top_nav_right"><img src="images/people.png" class="people" /><img src="images/garden_red.png" class="garden_red" /></a>
+            <div class="borderbox">中关村店</div>
+        </div>
+        <div class="mendian_detail_banner_con">
+                
+                <div class="mendian_detail_banner" id='slider'>
+                    <ul>
+                        <li style="display:block;"><img src="images/mendian_detail_banner.png" /></li>
+                        <li style="display:none;"><img src="images/mendian_detail_banner.png" /></li>
+                        <li style="display:none;"><img src="images/mendian_detail_banner.png" /></li>
+                    </ul>
+                </div>
+                <div class="mendian_detail_banner_shadow_con">
+                    <div class="mendian_detail_banner_shadow"></div>
+                    <p class="borderbox">中关村店<span>4.8分</span></p>
+                </div>
+            </div>
+        <div class="mendian_detail_content">
+                
+            
+            <ul class="mendian_detail_address telNum">
+            	<li><a href="javascript:;"><img src="images/cpyd_icon5.png" class="mendian_detail_address_icon" /><img src="images/sanjiao_right_gray.png" class="mendian_detail_address_jiantou_top" /><p class="borderbox">中关村南大街48号九龙商务中心B座225</p></a></li>
+                <li><a href="javascript:;"><img src="images/cpyd_icon6.png" class="mendian_detail_address_icon" /><img src="images/sanjiao_right_gray.png" class="mendian_detail_address_jiantou_top" /><p class="borderbox ">拨打电话 010-0101010</p></a></li>
+                <li><a href="javascript::"><img src="images/cpyd_icon4.png" class="mendian_detail_address_icon" /><img src="images/sanjiao_bottom_gray.png" class="mendian_detail_address_jiantou_bottom" /><p class="borderbox">2011-11-11入住，2011-11-11离开（<span>1晚</span>）</p></a></li>
+            </ul>
+            <ul class="mendian_detail_nav">
+            	<li ><a href="javascript:;" class="borderbox "><img src="images/cpyd_icon7.png" />房间预订</a></li>
+                <li><a href="javascript:;" class="borderbox active"><img src="images/cpyd_icon3.png" />酒店介绍</a></li>
+                <li ><a href="javascript:;" class="borderbox"><img src="images/cpyd_icon2.png" />精彩点评</a></li>
+                <li><a href="javascript:;" class="borderbox"><img src="images/cpyd_icon1.png" />经典相册</a></li>
+            </ul>
+            
+            <ul class="dianping_list">
+            	<li class="borderbox">
+                	<p class="dianping_list_title">一二三四<span class="float_right">2011-11-11</span></p>
+                    <div class="dianping_icon_con">
+                    	<img src="images/hotp-str-0.png" />
+                    </div>
+                    <p class="dianping_list_desc">
+                    	汉庭酒店坐落于上海闵行区北雀路，酒店环境舒适典雅，配套齐全，处于虹桥大枢纽位置，交通便利。酒店毗邻万达广场购物中心和西郊百联购物中心，酒店提供免费接机送机服务。
+                    </p>
+                </li>
+                <li class="borderbox">
+                	<p class="dianping_list_title">一二三四<span class="float_right">2011-11-11</span></p>
+                    <div class="dianping_icon_con">
+                    	<img src="images/hotp-str-1.png" />
+                    </div>
+                    <p class="dianping_list_desc">
+                    	汉庭酒店坐落于上海闵行区北雀路，酒店环境舒适典雅，配套齐全，处于虹桥大枢纽位置，交通便利。酒店毗邻万达广场购物中心和西郊百联购物中心，酒店提供免费接机送机服务。
+                    </p>
+                </li>
+                <li class="borderbox">
+                	<p class="dianping_list_title">一二三四<span class="float_right">2011-11-11</span></p>
+                    <div class="dianping_icon_con">
+                    	<img src="images/hotp-str-2.png" />
+                    </div>
+                    <p class="dianping_list_desc">
+                    	汉庭酒店坐落于上海闵行区北雀路，酒店环境舒适典雅，配套齐全，处于虹桥大枢纽位置，交通便利。酒店毗邻万达广场购物中心和西郊百联购物中心，酒店提供免费接机送机服务。
+                    </p>
+                </li>
+                <a href="javascript:;" class="loadmore">加载更多评论</a>
+            </ul>
+           
+        </div>
+    </div>
+</div><!--page-->
+<script src="js/jquery-2.0.3.min.js"></script>
+
+<script type="text/javascript">
+function setminheihgt(className,num){
+	//var page=$('#page');
+	var heightclass=$('.'+className);
+	var contentheight=heightclass.height();
+	var windowheight=$(document).height();
+
+	if(arguments.length==2){
+
+		windowheight=windowheight-num;
+	}
+	if(windowheight>=contentheight){
+		heightclass.height(windowheight);
+	}
+};
+window.onload=function(){
+setminheihgt('container')
+};
+window.onresize=function(){
+setminheihgt('container')
+};
+
+var p=$('.telNum').find('p');
+for(var i=0;i<p.length;i++){
+	var pi=p.eq(i);
+	var str=pi.text();
+	var reg=/(\d{7,})/;
+	//var result = str.match(/\d+/ig);
+	//alert(result)
+
+	
+	//var replacestart=new RegExp(result,'g'),replaceend='<span style="color:#ff0000;">|</span>';
+	str=str.replace(str.match(/\d+/ig),'<span style="color:#ff0000;">|</span>');;
+	pi.html(str);
+}
+
+
+</script>
+</body>
+</html>
+
+
+
+
+

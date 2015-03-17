@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="style/model.css" />
+<link rel="stylesheet" type="text/css" href="style/page.css" />
+<link href="style/photo.css" rel="stylesheet" type="text/css">
+<link href="style/photoswipe.css" type="text/css" rel="stylesheet">
+<script src="javascript/jquery-2.0.3.min.js"></script>
+<script src="javascript/jquery.lazyload.js" type="text/javascript"></script> 
+<script src="javascript/klass.min.js" type="text/javascript"></script>
+<script src="javascript/code.photoswipe-3.0.5.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+(function(window, PhotoSwipe){
+document.addEventListener('DOMContentLoaded', function(){
+var
+options = {},
+instance = PhotoSwipe.attach( window.document.querySelectorAll('#albumListCon a'), options );
+}, false);
+}(window, window.Code.PhotoSwipe));
+</script>
+<script type="text/javascript"> 
+jQuery(document).ready( 
+function($){ 
+$("img").lazyload({ 
+placeholder : "路径/grey.gif", 
+effect      : "fadeIn" 
+}); 
+}); 
+</script> 
+
+<title>手机相册-首页</title>
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css">
+<script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script>
+</head>
+<body>
+
+<div id="page" class="page borderbox hb100">
+<div id="albumListCon" class="albumListCon">
+
+	<a href="images/albumShowPhoto.jpg" class="album albumList">
+    	<img src="images/albumShowPhoto.jpg" alt="1" />
+        <p class="albumText borderbox">
+        	相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页
+        </p>
+    </a><!--album-->
+    <a href="images/albumShowPhoto.jpg" class="album albumList">
+    	<img src="images/albumShowPhoto.jpg" alt="2" />
+        <p class="albumText borderbox">
+        	相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页
+        </p>
+    </a><!--album-->
+    <a href="images/albumShowPhoto.jpg" class="album albumList">
+    	<img src="images/albumShowPhoto.jpg" alt="3" />
+        <p class="albumText borderbox">
+        	相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页
+        </p>
+    </a><!--album-->
+    <a href="images/albumShowPhoto.jpg" class="album albumList">
+    	<img src="images/albumShowPhoto.jpg" alt="4" />
+        <p class="albumText borderbox">
+        	相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页
+        </p>
+    </a><!--album-->
+</div><!--albumListCon-->
+    <a href="javascript:;" class="ajaxload borderbox">加载更多内容</a>
+</div><!--page-->
+
+
+
+
+<script>
+ function addHb100(){
+	var page=$('#page');
+	var windowheight=$(window).height();
+	var documentheight=$(document).height();
+	if(windowheight >= documentheight){
+		if(!page.hasClass('hb100')){
+			page.addClass('hb100');	
+		}
+	}else{
+		if(page.hasClass('hb100')){
+			page.removeClass('hb100');
+		}
+	}
+}
+window.onload=function(){
+	addHb100()
+};
+window.onresize=function(){
+	addHb100()
+}; 
+</script>
+</body>
+</html>

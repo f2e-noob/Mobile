@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/model.css" />
+<link rel="stylesheet" type="text/css" href="css/cpyd.css" />
+
+<title>产品预订</title>
+</head>
+<body>
+<div id="page" class="page borderbox ">
+	<div class="container dingdan_container">
+    	<div class="yuding_top_nav">
+        	<a href="javascript:;" class="yuding_top_nav_left"><img src="images/sanjiao_left_white.png" /></a>
+        	<a href="javascript:;" class="yuding_top_nav_right"><img src="images/people.png" class="people" /><img src="images/garden_red.png" class="garden_red" /></a>
+            <div class="borderbox">汉庭中关村店</div>
+        </div>
+        <div class="dingdan_content">
+        	<a href="javascript:;" class="dingdan_liebiao">
+            	<span class="yuding_zhengzai">正在预订</span>
+            	<p class="liebiao_title">汉庭快捷酒店中关村店</p>
+                <p class="liebiao_text">2011-11-11（星期一入住）1晚</p>
+                <p class="liebiao_desc"><span class="float_left">订单号 31234234</span><span class="float_right">2011-11-11 11:11:11下单</span></p>
+            </a>
+            <a href="javascript:;" class="dingdan_liebiao">
+            	<span class="yuding_chenggong">预订成功</span>
+            	<p class="liebiao_title">汉庭快捷酒店中关村店</p>
+                <p class="liebiao_text">2011-11-11（星期一入住）1晚</p>
+                <p class="liebiao_desc"><span class="float_left">订单号 31234234</span><span class="float_right">2011-11-11 11:11:11下单</span></p>
+            </a>
+            <a href="javascript:;" class="dingdan_liebiao">
+            	<span class="yuding_shibai">预订失败</span>
+            	<p class="liebiao_title">汉庭快捷酒店中关村店</p>
+                <p class="liebiao_text">2011-11-11（星期一入住）1晚</p>
+                <p class="liebiao_desc"><span class="float_left">订单号 51234234</span><span class="float_right">2011-11-11 11:11:11下单</span></p>
+            </a>
+        </div>
+    </div>
+</div><!--page-->
+<script src="js/jquery-2.0.3.min.js"></script>
+
+<script type="text/javascript">
+function setminheihgt(className,num){
+	//var page=$('#page');
+	var heightclass=$('.'+className);
+	var contentheight=heightclass.height();
+	var windowheight=$(document).height();
+
+	if(arguments.length==2){
+
+		windowheight=windowheight-num;
+	}
+	if(windowheight>=contentheight){
+		heightclass.height(windowheight);
+	}
+};
+window.onload=function(){
+setminheihgt('container')
+};
+window.onresize=function(){
+setminheihgt('container')
+};
+
+
+</script>
+</body>
+</html>

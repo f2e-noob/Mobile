@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>粉丝任务</title>
+<link rel="stylesheet"  href="style/jquery.mobile-1.2.0.min.css" />
+<link href="style/common.css" rel="stylesheet" type="text/css"/>
+<link href="style/activemodle.css" rel="stylesheet" type="text/css"/>
+<script src="javascript/jquery-1.9.1.js" ></script>
+<script src="javascript/jquery.mobile-1.3.1.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="page" >
+	<div class="header">
+		<ul class="header_nav">
+        	<li class="header_nav_li active"><a href="javascript:;" class="header_nav_a">积分任务</a></li>
+            <li class="header_nav_li"><a href="javascript:;" class="header_nav_a">抽奖</a></li>
+            <li class="header_nav_li"><a href="javascript:;" class="header_nav_a">礼品兑换</a></li>
+            <li class="header_nav_li f_r"><a href="#page2"  data-rel="dialog" data-transition="slide"  class="header_nav_button f_r"><span class="one"></span><span class="two"></span><span class="three"></span></a></li>
+        </ul>
+	</div><!--header-->
+	<div class="content">
+        <div class="egg_content">
+           <div class="turn_iconbox_font">
+                  <p class="turntab_n">see00000</p>
+                  <p class="turntab_m"><span>当前积分</span><label>50000000</label></p>
+             </div>
+           <div class="egg_icon_box"><img src="images/egg_pic.png" class="jingtai_egg" /><img src="images/eggs_bg.jpg" class="bg_egg" /><a href="javascript:;" class="eggs_button"><img src="images/eggs_btn.png"></a></div>
+           <div class="egg_icon_pic"><img src="images/egg_pica.gif" /></div>
+           
+        </div>
+	</div><!--content-->
+	
+</div>
+<div data-role="page" id="page2">
+       <div class="ui_index_t_icon">
+           <div class="ui_index_t_btn"><a href="#page" data-direction="reverse" class="header_right"><span class="del_btn header_btn_editor">取消</span></a></div>
+             <div class="ui_t_p_icon">
+                  <a href="javascript:;" class="ui_index_t_p">切换到转盘<span class="ui_ture_cr">√</span></a>
+                  <a href="javascript:;" class="ui_index_t_p ui_index_line">切换到砸蛋</a>  
+             </div>
+             <div class="ui_t_mid_icon"> 
+               <a href="javascript:;" class="ui_t_p_mid">
+                  <div class="ui_t_mid_ft">已领取（<label>8</label>）</div>
+                  <span class="ui_t_mid_tab"></span>
+                  <div class="clear"></div>
+               </a>
+               <a href="javascript:;" class="ui_t_p_mid">
+                  <div class="ui_t_mid_ft">执行中（<label>25</label>）</div>
+                  <span class="ui_t_mid_tab"></span>
+                  <div class="clear"></div>
+               </a>
+               <a href="javascript:;" class="ui_t_p_mid">
+                  <div class="ui_t_mid_ft">待领奖（<label>25</label>）</div>
+                  <span class="ui_t_mid_tab"></span>
+                  <div class="clear"></div>
+               </a>
+               <a href="javascript:;" class="ui_t_p_mid">
+                  <div class="ui_t_mid_ft">已结束（<label>6</label>）</div>
+                  <span class="ui_t_mid_tab"></span>
+                  <div class="clear"></div>
+               </a>  
+             </div>   
+          </div>   
+  </div><!--ui_page_two-->
+  <script type="text/javascript">
+  //$('.egg_icon_box').height($(document).height())
+  
+  </script>
+  
+  <script type="text/javascript">
+  var egg_icon_box=$('.egg_icon_box'),egg_icon_pic=$('.egg_icon_pic'),eggs_button=$('.eggs_button');
+  egg_icon_pic.empty()
+  window.onload=function(){
+  //setTimeout(function(){
+	$('.eggs_button').height($('.jingtai_egg').height())
+  //},300)
+  };
+  eggs_button.bind('tap',function(){
+	  window.clearTimeout(timer)
+	  egg_icon_pic.append('<img src="images/egg_pica.gif" />');
+	  
+	  var timer=setTimeout(function(){
+		  alert($('.jingtai_egg').height())
+		  egg_icon_pic.empty()
+		  //alert('恭喜哈中奖')
+	  },2600);
+  });
+  </script>
+</body>
+</html>

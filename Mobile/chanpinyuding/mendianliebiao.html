@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/model.css" />
+<link rel="stylesheet" type="text/css" href="css/cpyd.css" />
+
+<title>产品预订</title>
+</head>
+<body>
+<div id="page" class="page borderbox ">
+	<div class="container mendian_container">
+    	<div class="yuding_top_nav">
+        	<a href="javascript:;" class="yuding_top_nav_left"><img src="images/sanjiao_left_white.png" /></a>
+        	<a href="javascript:;" class="yuding_top_nav_right"><img src="images/people.png" class="people" /><img src="images/garden_red.png" class="garden_red" /></a>
+            <div class=" "><select><option>北京门点列表</option></select></div>
+        </div>
+        <div class="mendian_content">
+        	<div class="mendian_paixu_nav">
+            	<a href="javascript:;" class="mendian_paixu_nav_li borderbox">
+                	按价格由高到低
+                    <div class="paixu_icon">
+                    <img src="images/sanjiao_top_green.png" />
+                    <img src="images/sanjiao_bottom_gary.png" />
+                    </div>
+                </a>
+                <a href="javascript:;" class="mendian_paixu_nav_li borderbox">
+                	按评分由高到低
+                    <div class="paixu_icon">
+                    <img src="images/sanjiao_top_green.png" />
+                    <img src="images/sanjiao_bottom_gary.png" />
+                    </div>
+                </a>
+            </div>
+            
+            <div class="mendian_list_con">
+            	<div class="mendian_list">
+                	<a href="javascript:;">
+                	<div class="mendian_list_icon"><img src="images/room_true.png" /></div>
+                    <dl>
+                    	<dt><img src="images/logo.png" /></dt>
+                        <dd class="borderbox">
+                        	<p class="mendian_list_title">中关村店</p>
+                            <p class="mendian_list_pingfen">4.8分</p>
+                            <p class="mendian_list_desc">北京市海淀区中关村南大街九龙商务中心B座225</p>
+                        </dd>
+                    </dl>
+                    </a>
+                   	<ul class=" ">
+                    	<li><a href="javascript:;" class="borderbox"><img src="images/cpyd_icon5.png" />查看地图</a></li>
+                        <li><a href="javascript:;" class="borderbox"><img src="images/cpyd_icon4.png" />酒店详情</a></li>
+                        <li><a href="javascript:;" class="borderbox"><img src="images/cpyd_icon2.png" />精彩点评</a></li>
+                        <li><a href="javascript:;" class="mendian_parse_true borderbox" >$111起</a></li>
+                    </ul>
+                </div>
+                
+                <div class="mendian_list">
+                	<a href="javascript:;">
+                	<div class="mendian_list_icon"><img src="images/room_false.png" /></div>
+                    <dl>
+                    	<dt><img src="images/logo.png" /></dt>
+                        <dd class="borderbox">
+                        	<p class="mendian_list_title">中关村店</p>
+                            <p class="mendian_list_pingfen">4.8分</p>
+                            <p class="mendian_list_desc">北京市海淀区中关村南大街九龙商务中心B座225</p>
+                        </dd>
+                    </dl>
+                    </a>
+                   	<ul class="borderbox">
+                    	<li><a href="javascript:;" class="borderbox"><img src="images/cpyd_icon5.png" />查看地图</a></li>
+                        <li><a href="javascript:;" class="borderbox"><img src="images/cpyd_icon4.png" />酒店详情</a></li>
+                        <li><a href="javascript:;" class="borderbox"><img src="images/cpyd_icon2.png" />精彩点评</a></li>
+                        <li><a href="javascript:;" class="mendian_parse_false borderbox" >$111起</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div><!--page-->
+<script src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+function setminheihgt(className,num){
+	//var page=$('#page');
+	var heightclass=$('.'+className);
+	var contentheight=heightclass.height();
+	var windowheight=$(document).height();
+
+	if(arguments.length==2){
+		windowheight=windowheight-num;
+	}
+	if(windowheight>=contentheight){
+		heightclass.height(windowheight);
+	}
+};
+window.onload=function(){setminheihgt('container')};
+window.onresize=function(){setminheihgt('container')};
+</script>
+</body>
+</html>

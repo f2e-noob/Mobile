@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="style/model.css" />
+<link rel="stylesheet" type="text/css" href="style/page.css" />
+
+<title>手机相册-首页</title>
+
+</head>
+<body>
+
+<div id="page" class="page borderbox ">
+<div class="albumIndexCon">
+	<a href="javascript:;" class="album albumIndex">
+    	<div class="albumPhoto"><img src="images/albumShowPhoto.jpg" /></div>
+        <p class="albumText borderbox">
+        	相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页
+        </p>
+    </a><!--album-->
+    <a  href="javascript:;" class="album albumIndex">
+    	<div class="albumPhoto"><img src="images/albumShowPhoto.jpg" /></div>
+        <p class="albumText borderbox">
+        	相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页相册首页
+        </p>
+    </a><!--album-->
+</div><!--albumIndexCon-->
+    <a href="javascript:;" class="ajaxload borderbox">加载更多内容</a>
+</div><!--page-->
+<script src="javascript/jquery-2.0.3.min.js"></script>
+<script>
+ function addHb100(){
+	var page=$('#page');
+	var windowheight=$(window).height();
+	var documentheight=$(document).height();
+	if(windowheight >= documentheight){
+		if(!page.hasClass('hb100')){
+			page.addClass('hb100');	
+		}
+	}else{
+		if(page.hasClass('hb100')){
+			page.removeClass('hb100');
+		}
+	}
+}
+
+window.onload=function(){
+	addHb100()
+};
+
+window.onresize=function(){
+	addHb100()
+}; 
+</script>
+</body>
+</html>
